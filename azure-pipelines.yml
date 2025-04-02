@@ -7,10 +7,9 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
-
+  name: 'TestAgent'
 steps:
-- task: Maven@3
+- task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
