@@ -6,13 +6,12 @@
 trigger:
 - main
 
-pool:
-  vmImage: ubuntu-latest
+pool: TeatAgent2
 
 steps:
-- task: Maven@3
+- task: Maven@4
   inputs:
-    mavenPomFile: 'pom.xml'
+    mavenPomFile: 'speech-transcription-backend/pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.11'
